@@ -1,0 +1,21 @@
+<div class="rocket-details">
+  <div class="header">
+    <button routerLink="..">Back</button>
+    <button *ngIf="!isInFavorites" (click)="addToFavorites()">
+      Add to Favorites
+    </button>
+    <button *ngIf="isInFavorites" (click)="removeFromFavorites()">
+      Remove from Favorites
+    </button>
+  </div>
+  <div class="content" *ngIf="launch">
+    <h3>Launch #{{launch.flight_number}}</h3>
+    <p>Mission Name: {{launch.mission_name}}</p>
+    <p>Mission Details: {{launch.details}}</p>
+    <p>Mission Cost: {{launch.rocket?.cost_per_launch}}</p>
+
+    <div class="rocket-info">
+      <p>Rocket Name: {{launch.rocket?.rocket_name}}</p>
+    </div>
+  </div>
+</div>

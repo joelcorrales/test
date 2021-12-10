@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  background-color: gray;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+}
+
+.launch-list {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.launch-details {
+  padding: 15px;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}

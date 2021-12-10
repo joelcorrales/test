@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="launch-list">
+    <div
+      class="launch-details"
+      *ngFor="let launch of launches; let i=index"
+      [routerLink]="['launch', launch.flight_number , 'rocket', launch?.rocket?.rocket_id]"
+    >
+      <p>Launch #{{launch.flight_number}}</p>
+      <p>{{launch.details}}</p>
+    </div>
+  </div>
+</div>
